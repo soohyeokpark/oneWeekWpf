@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBasicControlApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    
-    
+        Title="MainWindow" Height="847" Width="800">
+
+
     <!--다수의 컨트롤을 쌓아 표시하는 layout control-->
-    <StackPanel> 
+    <StackPanel Margin="0,0,0,-146">
         <!--TextBlock-->
         <TextBlock Text="TextBlock"></TextBlock>
-        
+
         <!--TextBox-->
         <TextBox Text="TextBox"></TextBox>
-        
+
         <!--ProgressBar-->
         <ProgressBar Value="50" Width="60" Height="20"></ProgressBar>
-        
+
         <!--Slider-->
         <Slider Value="5" Width="60"></Slider>
-        
+
         <!--PasswordBox-->
         <PasswordBox Password="Secret"></PasswordBox>
 
@@ -34,6 +34,30 @@
                       ></MediaElement>
         <!--<MediaElement Source="http://hubblesource.stsci.edu/sources/video/clips/details/images/hst_1.mpg"
                       Height="80"/>-->
-        
+
+        <Button Content="Button"></Button>
+
+        <ToggleButton Content="ToggleButton"></ToggleButton>
+
+        <CheckBox Content="CheckBox"></CheckBox>
+
+        <RadioButton Content="RadioButton"></RadioButton>
+
+        <Border Background="Red" Padding="5">
+            <Button Padding="10">
+                <Image Source="/opencv_girl.jpg" Height="80" Stretch="Uniform"></Image>
+            </Button>
+        </Border>
+
+        <ScrollViewer Width="100" Height="100">
+            <Button Padding="10">
+                <TextBlock Text="TextBlock"></TextBlock>
+            </Button>
+        </ScrollViewer>
+
+        <Viewbox Stretch="None">
+            <Button Content="Button"></Button>
+        </Viewbox>
+
     </StackPanel>
 </Window>
