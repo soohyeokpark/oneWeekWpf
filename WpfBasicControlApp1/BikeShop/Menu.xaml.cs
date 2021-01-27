@@ -25,8 +25,26 @@ namespace BikeShop
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Contact.xaml", UriKind.Relative));
+        {            
+            string now_button_content = (sender as Button).Content.ToString();
+            string uri = string.Empty;
+
+            if(now_button_content == "Products")
+            {
+                uri = "";
+            } 
+            else if (now_button_content == "Live support")
+            {
+                uri = "/Discussion.xaml";
+            } 
+            else if (now_button_content == "Email support")
+            {
+                uri = "/Contact.xaml";
+            }
+
+            NavigationService.Navigate(new Uri(uri, UriKind.Relative));
         }
+
+
     }
 }
