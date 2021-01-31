@@ -8,13 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Menu">
 
-    <Grid>
+    <Grid Background="{Binding Text, ElementName=color}">
         <Button Content="Products" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top" Width="120" Height="120"/>
         <Button Content="Live support" HorizontalAlignment="Left" Margin="189,50,0,0" VerticalAlignment="Top" Width="120" Height="120"
                 Click="Button_Click"/>
         <Button Content="Email support" HorizontalAlignment="Left" Margin="330,50,0,0" VerticalAlignment="Top" Width="120" Height="120"
                 Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,205,0,0" TextWrapping="Wrap" Text="Adventure works" VerticalAlignment="Top" Height="120" Width="400" FontSize="24" FontStyle="Italic"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,205,0,0" TextWrapping="Wrap" Text="Adventure works" VerticalAlignment="Top" Height="120" Width="400" FontSize="24" FontStyle="Italic"
+                   x:Name="color2"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="50,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="400" FontSize="24" FontStyle="Italic"
+            Text="Yellow" x:Name="color" Visibility="Hidden"></TextBlock>
 
     </Grid>
 </Page>
