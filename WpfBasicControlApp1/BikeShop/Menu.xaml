@@ -4,11 +4,18 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BikeShop"
+      xmlns:c="clr-namespace:BikeShop.classes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Menu">
 
-    <Grid Background="{Binding Text, ElementName=color}">
+    <!--<Page.Resources>
+        <c:My x:Key="my" />
+        <c:TwiceConverter x:Key="twiceConv" />
+    </Page.Resources> -->
+
+    <Grid>
+        <!--Background="{Binding Text, ElementName=color}" -->
         <Button Content="Products" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top" Width="120" Height="120"/>
         <Button Content="Live support" HorizontalAlignment="Left" Margin="189,50,0,0" VerticalAlignment="Top" Width="120" Height="120"
                 Click="Button_Click"/>
@@ -18,8 +25,23 @@
         <TextBlock HorizontalAlignment="Left" Margin="50,205,0,0" TextWrapping="Wrap" Text="Adventure works" VerticalAlignment="Top" Height="120" Width="400" FontSize="24" FontStyle="Italic"
                    x:Name="color2"/>
 
-        <TextBlock HorizontalAlignment="Left" Margin="50,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="400" FontSize="24" FontStyle="Italic"
+        <!--<TextBlock HorizontalAlignment="Left" Margin="50,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="400" FontSize="24" FontStyle="Italic"
             Text="Yellow" x:Name="color" Visibility="Hidden"></TextBlock>
+
+        이 textBlock 어케 뿌리냐-->
+        <!--<TextBlock HorizontalAlignment="Left" Margin="50,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="400" FontSize="24" FontStyle="Italic"
+            Text="{Binding Speed, Converter={StaticResource twiceConv}}" Visibility="Visible"></TextBlock>-->
+        
+        
+        <!-- 안나온다 이것도
+        <ListBox HorizontalAlignment="Left" Height="355" Margin="513,50,0,0" VerticalAlignment="Top" Width="235" RenderTransformOrigin="0.002,-0.054"
+                 ItemsSource="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Speed}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
 
     </Grid>
 </Page>

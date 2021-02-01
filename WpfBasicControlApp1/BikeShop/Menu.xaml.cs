@@ -22,6 +22,19 @@ namespace BikeShop
         public Menu()
         {
             InitializeComponent();
+            MakeDataContext(); // test
+        }
+
+        private void MakeDataContext()
+        {
+            var cars = new List<classes.Car>();
+            for(int i= 0; i< 10; i++)
+            {
+                cars.Add(new classes.Car() {
+                    Speed = i * 10
+                });
+            }
+            this.DataContext = cars;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
