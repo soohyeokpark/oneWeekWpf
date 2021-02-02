@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:BikeShop"
+      xmlns:data="clr-namespace:BikeShop"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Discussion">
@@ -17,8 +17,33 @@
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
+
+        <ListBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5, 5, 5, 0">
+            <ListBox.ItemsSource>
+                <data:Talk></data:Talk>
+            </ListBox.ItemsSource>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <!--left/top/right/bottom-->
+                    <StackPanel Width="300" Margin="0,5,0,5">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/res/chat.png" Width="20"></Image>
+
+                            <TextBlock Text="{Binding Sender}"
+                                       FontWeight="Bold"
+                                       Margin="10,0,0,0"></TextBlock>
+                        </StackPanel>
+
+                        <TextBlock Text="{Binding Content}"
+                                   Margin="30,0,0,0"
+                                   TextWrapping="Wrap"></TextBlock>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         
-        <ListBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5, 5, 5, 0"/>
         <TextBox Grid.Row="1" Grid.Column="0" Margin="5" Text="Type your message here"/>
         <Button Grid.Row="1" Grid.Column="1" Margin="0, 5, 5, 5" Content="Send" />
 
