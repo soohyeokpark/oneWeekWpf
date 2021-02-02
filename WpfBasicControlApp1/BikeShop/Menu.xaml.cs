@@ -31,7 +31,7 @@ namespace BikeShop
             for(int i= 0; i< 10; i++)
             {
                 cars.Add(new classes.Car() {
-                    Speed = i * 10
+                    speed = i* 10
                 });
             }
             this.DataContext = cars;

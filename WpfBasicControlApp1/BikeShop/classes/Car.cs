@@ -1,20 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Media;
 
 namespace BikeShop.classes
 {
-    class Car
+    class Car : INotifyPropertyChanged
     {
-        public Car(int _speed)
+        private double Speed;
+        
+        public Color Color { get; set; }
+        public Human Driver { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public double speed
         {
-            //this.Speed = _speed;
+            get
+            {
+                return this.Speed;
+            }
+            set
+            {
+                Speed = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Speed"));
+            }
         }
+    }
 
-        public Car()
-        { }
+    public class Human
+    {
 
-        public int Speed = 0;
     }
 }

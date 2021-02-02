@@ -53,6 +53,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ProductsManagement.xaml.cs">
+      <DependentUpon>ProductsManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="res\Notifier.cs" />
+    <Compile Include="res\ProductsFactory.cs" />
     <Compile Include="res\Talk2.cs" />
     <Compile Include="res\Talk.cs" />
     <Page Include="Contact.xaml">
@@ -85,6 +90,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductsManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
