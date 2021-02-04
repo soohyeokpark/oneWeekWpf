@@ -44,7 +44,7 @@ namespace BikeShop
 
             if(now_button_content == "Products")
             {
-                uri = "";
+                uri = "/ProductsManagement.xaml";
             } 
             else if (now_button_content == "Live support")
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BikeShop.res;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,28 @@ namespace BikeShop
     /// </summary>
     public partial class ProductsManagement : Page
     {
+        private ProductsFactory factory = new ProductsFactory();
+
         public ProductsManagement()
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(this.dataGrid != null)
+            {
+                this.dataGrid.ItemsSource = null;
+                if (false == string.IsNullOrEmpty(this.textBox.Text))
+                {
+                    this.dataGrid.ItemsSource = factory.FindProducts(this.textBox.Text);
+                }
+            }
+            else
+            {
+                return;
+            }            
+        }
+
     }
 }

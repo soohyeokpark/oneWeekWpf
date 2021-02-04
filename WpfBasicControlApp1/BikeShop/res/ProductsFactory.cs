@@ -15,7 +15,7 @@ namespace BikeShop.res
 
         public IEnumerable<Product> FindProducts(string searchString)
         {
-            return products.Where(p => p.Title.Contains(searchString));
+            return products.Where(p => p.Title.ToUpper().Contains(searchString.ToUpper()));
         }
 
         #region In-memory data

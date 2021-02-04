@@ -9,10 +9,27 @@
       Title="ProductsManagement">
 
     <Grid Background="White">
-        <TextBlock HorizontalAlignment="Left" Margin="32,26,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="108,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="659"/>
-        <DataGrid HorizontalAlignment="Left" Height="347" Margin="32,74,0,0" VerticalAlignment="Top" Width="489"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="347" Margin="552,74,0,0" VerticalAlignment="Top" Width="215"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Search"/>
+            <TextBox FontSize="15" Margin="0,0,5,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Name="textBox" TextWrapping="Wrap" Text="Type here..." TextChanged="TextBox_TextChanged"/>
+        </Grid>
+
+        <DataGrid Name="dataGrid" Grid.Column="0" Grid.Row="1" Margin="5,0,5,5"/>
+        <Border Margin="0,0,5,5" Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="1"/>
 
     </Grid>
 </Page>
