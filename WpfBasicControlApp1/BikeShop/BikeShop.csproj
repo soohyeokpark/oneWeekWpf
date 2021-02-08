@@ -53,6 +53,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="classes\t_templatebinding.xaml.cs">
+      <DependentUpon>t_templatebinding.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProductsManagement.xaml.cs">
       <DependentUpon>ProductsManagement.xaml</DependentUpon>
     </Compile>
@@ -60,6 +63,10 @@
     <Compile Include="res\ProductsFactory.cs" />
     <Compile Include="res\Talk2.cs" />
     <Compile Include="res\Talk.cs" />
+    <Page Include="classes\t_templatebinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Contact.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

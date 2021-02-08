@@ -54,6 +54,10 @@ namespace BikeShop
             {
                 uri = "/Contact.xaml";
             }
+            else if (now_button_content == "Test")
+            {
+                uri = "/classes/t_templatebinding.xaml";
+            }
 
             NavigationService.Navigate(new Uri(uri, UriKind.Relative));
         }

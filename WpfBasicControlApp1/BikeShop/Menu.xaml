@@ -14,7 +14,7 @@
         <c:TwiceConverter x:Key="twiceConv" />
     </Page.Resources> -->
 
-    <Grid>
+    <Grid Background="{StaticResource my-backgroundcolor}">
         <!--Background="{Binding Text, ElementName=color}" -->
         <Button Content="Products" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top" Width="120" Height="120"
                 Click="Button_Click"/>
@@ -25,6 +25,8 @@
         
         <TextBlock HorizontalAlignment="Left" Margin="50,205,0,0" TextWrapping="Wrap" Text="Adventure works" VerticalAlignment="Top" Height="120" Width="400" FontSize="24" FontStyle="Italic"
                    x:Name="color2"/>
+        <Button Content="Test" HorizontalAlignment="Left" Margin="468,50,0,0" VerticalAlignment="Top" Width="120" Height="120"
+            Click="Button_Click"/>
 
         <!--<TextBlock HorizontalAlignment="Left" Margin="50,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="400" FontSize="24" FontStyle="Italic"
             Text="Yellow" x:Name="color" Visibility="Hidden"></TextBlock>
